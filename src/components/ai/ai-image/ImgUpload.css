@@ -1,0 +1,43 @@
+/* Custom styles for the image upload container */
+.img-upload-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling for the dropzone area */
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background-color: white;
+    padding: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropzone.active {
+    background-color: #f0f8ff;
+}
+
+/* Styling for the upload icon and instructions */
+.dropzone p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #4CAF50;
+}
+
+/* Styling for the uploaded images preview */
+.uploaded-images-preview {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.uploaded-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

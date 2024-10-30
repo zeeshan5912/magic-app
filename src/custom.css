@@ -1,0 +1,1328 @@
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item {
+    margin: 0 0.2em;
+    padding: 0 0.5em;
+  }
+
+  .navbar .navbar-menu-wrapper .navbar-nav .custom-nav-item:not(:last-child):hover {
+    background-color: rgb(75, 74, 74);
+    border-radius: 10px;
+  }
+
+  @media (max-width: 991px) {
+    .navbar .navbar-menu-wrapper .navbar-nav .nav-item {
+      margin: 0 0;
+      padding: 0 0.3em;
+    }
+  }
+
+  .mdi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .addnew {
+    color: white;
+    /* border: 1px solid rgba(0, 0, 0, 0.137); */
+  }
+
+  .upgrade {
+
+    border: none;
+    color: white;
+    border-radius: 10px;
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background-size: 200% 200%;
+    /* Double the background size to allow for smooth transitions */
+    animation: gradient-shift 20s ease infinite;
+    /* Animation to make the gradient shift */
+  }
+
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .upgrade:hover {
+    opacity: 0.9;
+  }
+
+  .addnew:hover {
+    border-radius: 20px;
+    color: white !important;
+  }
+
+  .navbar .navbar-brand-wrapper {
+    background-color: #323452;
+    color: white;
+    height: 2.7em;
+  }
+
+  .navbar .navbar-menu-wrapper {
+    background-color: #323452;
+    color: white;
+    height: 2.7em;
+
+  }
+
+  .searchinput {
+    border: none;
+    width: 260px;
+    background-color: rgba(117, 117, 117, 0.288);
+  }
+
+  .page-body-wrapper {
+    padding-top: 45px;
+  }
+
+  .AddNewModel .tabs-content .list {
+    display: none;
+  }
+
+  .AddNewModel .tabs {
+    display: flex;
+    list-style-type: none;
+  }
+
+  .AddNewModel .tabs li {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0.7em;
+    padding-bottom: 0.6em;
+  }
+
+  .active-tab {
+    border-bottom: 2px solid #3f3de7;
+    /* background-color: #3f3e91; */
+
+  }
+
+  .profileDropdown {
+    width: 300px;
+  }
+
+  .profileStatusContainer {
+    position: relative;
+  }
+
+  .profileStatusContainer .onlineDot {
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+    right: 19%;
+    border: 2px solid white;
+  }
+
+  /* Custom dropdown styles */
+  .custom-dropdown {
+    position: relative;
+    width: 100%;
+  }
+
+  .custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    width: inherit;
+    /* Custom width */
+  }
+
+  .custom-dropdown-menu.show {
+    display: block;
+  }
+
+  .custom-dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  .custom-dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+
+  /* Make the parent dropdown scrollable */
+  .profileDropdown {
+    max-height: 500px;
+    /* Adjust as needed */
+    overflow-y: auto;
+  }
+
+  /* Slim scrollbar styling */
+  .profileDropdown::-webkit-scrollbar {
+    width: 6px;
+    /* Slim scrollbar width */
+  }
+
+  .profileDropdown::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Darker scrollbar */
+    border-radius: 10px;
+  }
+
+  .profileDropdown::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Light background for track */
+  }
+
+  @media (max-width: 991px) {
+    .profileDropdown {
+      max-height: 400px !important;
+      /* Adjust as needed */
+      overflow-y: auto;
+    }
+  }
+  #navbarNavDropdown {
+    margin-top: 4em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-search .input-group,
+  #Searchinput,
+  .SearchBtn {
+    background-color: #5a5c74;
+    color: #dedee3;
+
+  }
+
+  .SearchBtn {
+    position: absolute;
+    left: 0;
+  }
+
+  #Searchinput::placeholder {
+    color: #dedee3;
+  }
+
+  #Searchinput::-webkit-search-cancel-button {
+    cursor: pointer;
+    /* display: none;  */
+  }
+
+  #Searchinput::-moz-search-clear-button {
+    cursor: pointer;
+    /* display: none;  */
+  }
+
+  .clear-button {
+    position: absolute;
+    right: 10px;
+    /* Position the button inside the input */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
+    color: #dedee3;
+    /* Set color for the clear button */
+    font-size: 16px;
+    /* Adjust size as needed */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    outline: none;
+    /* Remove outline */
+    padding: 0;
+    /* Remove padding */
+  }
+
+  .nav-search .input-group {
+    width: fit-content;
+  }
+  .offcanvasText {
+    font-size: 12px;
+  }
+
+  /* Slim scrollbar styles */
+  .offcanvas-body::-webkit-scrollbar {
+    width: 5px;
+    /* Slim scrollbar width */
+  }
+
+  .offcanvas-body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded scrollbar */
+  }
+
+  .offcanvas-body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Darker on hover */
+  }
+
+  #offcanvasRight .row .col {
+    padding: 0.7em 0;
+  }
+
+  #offcanvasRight .row .col:hover {
+    background-color: rgba(163, 163, 163, 0.171);
+    border-radius: 10px;
+  }
+  .custom_sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .custom_sidebar .nav .nav-item {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .custom_sidebar .nav .nav-item:hover {
+    background-color: rgba(189, 189, 189, 0.295);
+    width: 100%;
+  }
+
+  .navbar .navbar-menu-wrapper .navbar-nav .nav-item:last-child {
+    margin-right: 0.4rem;
+  }
+
+  .custom_sidebar .nav-link span {
+    color: black;
+    font-size: 14px;
+  }
+  #navbarNavDropdown {
+    margin-top: auto;
+  }
+
+  #navbarNavDropdown,
+  #mobiletoggle {
+    background-color: white;
+  }
+
+  #mobiletoggle {
+    width: 100%;
+    position: relative;
+  }
+
+  #mobiletoggle .input-group {
+    width: 90%;
+    margin-top: 0.2em !important;
+    position: relative;
+  }
+
+  #mobiletoggle input {
+    width: 100% !important;
+    padding-left: 1em !important;
+    height: 2.2em;
+  }
+
+  #mobiletoggle .SearchBtn {
+    display: none;
+  }
+
+  #mobiletoggle .addnew {
+    background-color: #3f3de7;
+  }
+  .navMain{
+         
+    height: 95vh;
+     max-height: 95vh;
+     overflow-y: auto !important;
+     overflow-x: hidden !important;         /* Prevent horizontal scrolling */
+position: relative !important;   
+  }
+  
+/* .sidebar-icon-only .nav-item:hover .menu-title {
+position: fixed !important;
+left: 70px !important;
+width: 190px !important;
+background-color: #4B49AC !important;
+z-index: 1000 !important;
+padding: 10px !important;
+display: flex !important;
+align-items: center !important;
+box-shadow: 4px 4px 7px rgba(182, 185, 189, 0.25) !important;
+} */
+
+/* Hide the menu title initially */
+/* .sidebar-icon-only .nav-item .menu-title {
+display: none !important;
+} */
+
+/* Show the title on hover */
+/* .sidebar-icon-only .nav-item:hover .menu-title {
+display: flex !important;
+} */
+
+/* Dropdown menu in collapsed state */
+.sidebar .nav-item{
+    position: relative !important;
+}
+.sidebar-icon-only .nav-item .collapse {
+position: fixed !important;
+/* margin-top: -41px; */
+/* top: calc(50% + 10px); */
+left: 70px !important;
+width: 190px !important;
+background: #fff !important;
+z-index: 1000 !important;
+box-shadow: 4px 4px 7px rgba(182, 185, 189, 0.25) !important;
+}
+
+.sidebar-icon-only .nav-item:hover .collapse {
+display: block !important;
+visibility: visible !important;
+}
+ 
+  /* Slim and Beautiful Scrollbar */
+.navMain::-webkit-scrollbar {
+display: none;
+width: 2px; /* Adjust width to make it slim */
+}
+
+.navMain::-webkit-scrollbar-track {
+background: #f1f1f1; /* Track background */
+border-radius: 10px;  /* Optional: To make it look rounder */
+}
+
+.navMain::-webkit-scrollbar-thumb {
+background-color: #4b49ac; /* Scrollbar color */
+border-radius: 10px; /* Rounder corners */
+}
+
+.navMain::-webkit-scrollbar-thumb:hover {
+background-color: #555; /* Darken scrollbar on hover */
+}
+.main-panelcal{
+margin-left: 235px !important;
+}
+.leftnavbotum .nav-item .nav-link:hover{
+    background-color: transparent !important;
+  }
+  .keydevsBtn {
+    border: none;
+    padding: 1rem;
+    background-color: blue;
+  }
+
+  .input-group {
+    position: relative;
+    z-index: 2;
+  }
+
+  .input-group-text {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+  }
+
+  input.form-control-sm,
+  .input-group-text {
+    height: 2.2rem;
+  }
+
+  label.form-label {
+    font-weight: bold;
+    margin-left: 1.2rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  span.input-group-text {
+    background-color: transparent;
+    border: none !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .input-group input {
+    padding-left: 3em;
+  }
+
+  .input-group input:focus {
+    padding-left: 1em;
+  }
+  .main-panelCollapse{
+    margin-left: 70px;
+  }
+
+  @media (max-width: 991px) {
+    .main-panelCollapse{
+      margin-left: 0 !important;
+    }
+    .main-panelcal{
+      margin-left: 0 !important;
+    }
+  }
+  .unlimited{
+    /* width: 170px; */
+    display: flex;
+    white-space: nowrap;
+    word-spacing: 6px;
+}
+.unWord{
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #3f3e91;
+}
+.unImage{
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #bab9f1;
+}
+.unWord i{
+    color: #3f3e91;
+}
+.unImage i{
+    color: #bab9f1;
+}
+.mdi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progressNav li{
+    font-weight: 900;
+    cursor: pointer;
+    margin: 0 1em;
+    padding: 0.5em 0;
+}
+.progressNav li:hover{
+    background-color: rgb(233, 232, 232);
+    border-radius: 10px;
+}
+.progressNav li.active div{
+    background-color: #3f3e91;
+    color: white;
+}
+.progressNav li div{
+    padding: 0 0.7em;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+.progressNav li span{
+    display: none;
+}
+.progressNav li.active span{
+    display: block;
+}
+.advanceOptions{
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    margin-top: 2em;
+    position: relative;
+}
+.btnTogle{
+    /* background-color: #f5f7ff; */
+    position: absolute;
+    margin-top: -1.6em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btnTogle button div{
+  white-space: nowrap;
+
+}
+.btnTogle:hover button div{
+    text-decoration: underline;
+    font-weight: 900;
+}
+.toggleOptions{
+    margin-top: 1.5em;
+    display: none;
+}
+.addKeywordContainer{
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1.5em;
+    border-radius: 15px;
+    margin-top: 1em;
+}
+.addkeywordBtn:hover span{
+    text-decoration: underline;
+}
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tag {
+    background-color: #f5f7ff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+}
+
+.tag.selected {
+    background-color: #f3e8ff;
+    border-color: #f3e8ff;
+    color: #6b4acc;
+}
+
+.select-btn {
+    background-color: #f3e8ff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b4acc;
+    margin-top: 30px;
+}
+
+.select-btn i {
+    margin-left: 10px;
+}
+
+  .aimg span{
+    font-size: 13px;
+  }
+ .fs-13{
+  font-size: 13px;
+ }
+
+
+
+
+
+
+ .settingContainer {
+  display: none;
+           }
+
+           .stableDiffusionTabs .tabs-content1 .lists {
+            display: none;
+        }
+        .First-tab .tabs-content2 .list {
+            display: none;
+        }
+
+        .First-tab .tabs2 {
+            display: flex;
+
+        }
+        .stableDiffusionTabs .tabs1 {
+            display: flex;
+            width: 90%;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+
+        }
+
+        .First-tab .tabs2 li {
+            list-style-type: none;
+            padding: 0.5em 1.5em;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .stableDiffusionTabs .tabs1 li {
+            list-style-type: none;
+            padding: 0.5em 1.5em;
+            /* border-radius: 20px; */
+            cursor: pointer;
+            /* width: 25%; */
+            text-align: center;
+        }
+        .stableDiffusionTabs li:hover{
+            background-color: #3f3e91;
+            color: white;
+        }
+        .active-tab2 {
+            background-color: #3f3e91;
+            color: white;
+        }
+        .active-tab1 {
+            background-color: #3f3e91;
+            color: white;
+        }
+        .ai_tools{
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            margin-top: 5em;
+            position: relative;
+        }
+        .btnShowHide{
+            
+            position: absolute;
+            margin-top: -1.8em;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+        .toggleContent {
+            display: block; /* Initially show */
+            margin-top: 3em;
+                }
+                .toggleContent a{
+            
+                    text-decoration: none;
+                    color: black;
+                }
+        .results .card {
+            background-color: transparent;
+        }
+        .results .card:hover .imgButton{
+            display: flex;
+        }
+        .results .card img{
+            border-radius: 10px;
+        }
+        .imgContainer{
+            position: relative;
+        }
+        .imgButton{
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            display: none;
+            flex-direction: column;
+        }
+        .imgbtn{
+            padding: 0.5em;
+            border: none;
+            border-radius: 50%;
+
+        }
+        .mdi{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .imgbtn:hover{
+            background-color: #34d399 !important;
+            color: white;
+        }
+        .imgClose:hover{
+            background-color: red !important;
+            color:white;
+        }
+        .tooltip-trigger {
+          position: relative; /* Make the label position relative for the tooltip */
+          cursor: pointer; /* Show pointer cursor on hover */
+      }
+      
+      .tooltip {
+        display: none; /* Hidden by default */
+        width: 200px; /* Adjust the width as necessary */
+        background-color: white; /* Tooltip background color */
+        color: black; /* Tooltip text color */
+        text-align: center;
+        border-radius: 5px; /* Rounded corners */
+        padding: 8px;
+        position: absolute;
+        z-index: 1000; /* Ensure it appears above other elements */
+        bottom: 125%; /* Position above the label */
+        left: 50%;
+        margin-left: -75px; /* Center the tooltip */
+        opacity: 0; /* Start hidden */
+        transition: opacity 0.3s ease; /* Smooth transition */
+        
+        /* Shadow effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a 3D effect */
+    }
+    .chatContainer{
+      display: flex;
+      width: 100%;
+      height: 76vh;
+      border: 1px solid rgba(201, 201, 201, 0.486);
+      border-radius: 20px;
+    }
+    .chatSideBar{
+      width: 350px;
+      border-right: 1px solid rgba(201, 201, 201, 0.486);
+      
+    }
+    .chatBox{
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chatSideBarHeader, .chatBoxHeader{
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(201, 201, 201, 0.486);
+      height: 5em !important;
+    }
+    .chatSideBarHeader{
+      height: 4.6em !important;
+    }
+    .chatSideBarHeader{
+      justify-content: center;
+    }
+    .chatBoxHeader{
+      display: flex;
+      justify-content: space-between;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+    .inputSearch{
+      position: relative;
+    }
+    .inputSearch input{
+      border-radius: 30px;
+      padding-left: 30px;
+      height: 2.5em;
+    }
+    .inputSearch .mdi-magnify{
+      position: absolute;
+      top: 28%;
+      left: 10px;
+    }
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+  }
+  
+  .tooltip-icon {
+      position: relative;
+      cursor: pointer;
+  }
+  
+  .tooltip-text {
+      display: none; /* Hidden by default */
+      position: absolute;
+      width: fit-content; /* Adjust width if needed */
+      color: black;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow to the tooltip */
+      z-index: 1000;
+      bottom: 150%; /* Show tooltip above the <i> */
+      left: 50%;
+      bottom: 100%;
+      transform: translateX(-50%); /* Center the tooltip horizontally */
+      transition: opacity 0.3s ease;
+      overflow: hidden;
+  }
+  
+  .tooltip-container:hover .tooltip-text {
+      display: flex; /* Show tooltip on hover */
+      opacity: 1; /* Fade-in effect */
+  }
+  .tooltip-btn{
+    border: none;
+    background-color: #3f3e91;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  
+  .receiverMsg, .sendMsg{
+    width: 100%;
+    padding: 0.6em 1.5em;
+  }
+  .receiverMsg{
+    display: flex;
+    justify-content: start;
+  }
+  .sendMsg{
+    display: flex;
+    justify-content: end;
+  }
+  .userProfile img{
+    width: 35px;
+     border-radius: 50%;
+  }
+  .chatBox .Msg{
+    position: relative;
+    display: flex;
+    margin: 0 0.5em;
+    border-radius: 20px;
+    padding: 0.5em 0.8em;
+    font-size: 14px;
+    align-items: center;
+    word-wrap: break-all;
+    white-space: normal;
+    max-width: 80%; /* Ensures the message respects the container width */
+    overflow-wrap: break-word; /* Ensures long words are broken and wrapped */
+  }
+  
+  .chatBox .receiverMsg .Msg .copyClipboard{
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: -8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .chatBox .sendMsg .Msg .copyClipboard{
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: -8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .chatBox .Msg:hover .copyClipboard{
+    display: flex;
+  }
+  .chatBox .receiverMsg .Msg{
+    background-color: #f1f1f3;
+    color: black;
+  }
+  .chatBox .sendMsg .Msg{
+    background-color: #323452;
+    color: white;
+  }
+ 
+  .msgSection{
+    height: 100% !important;
+    max-height: 36em;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  /* Custom scrollbar styles for WebKit browsers */
+.msgSection::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+.msgSection::-webkit-scrollbar-thumb {
+  background-color: #dddddd; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Roundness of the scrollbar thumb */
+}
+
+.msgSection::-webkit-scrollbar-thumb:hover {
+  background-color: #d8d8d8; /* Color of the scrollbar thumb on hover */
+}
+
+.msgSection::-webkit-scrollbar-track {
+  background: transparent; /* Background of the scrollbar track */
+}
+.msgSendBox{
+  background-color: rgba(255, 255, 255, 0);
+  padding-top: 1em;
+}
+.msgSendBox .msgInput{
+  width: 95%;
+  position: relative;
+}
+
+.msgSendBox textarea{
+  padding-top: 0.7em;
+  padding-left: 2em;
+  padding-right: 5em;
+  height: 3em !important;
+  font-size: 16px;
+  position: relative;
+  height: auto;
+  width: 100%;
+  border: 1px solid rgba(184, 184, 184, 0.486);
+  border-radius: 20px;
+}
+
+.msgSendBox textarea::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+}
+
+.msgSendBox textarea {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.msgSendBox .promptContainer, .msgSendBox .Mice{
+  display: flex;
+  position: absolute;
+  top: 0.3em;
+  right: 63px;
+}
+.msgSendBox .Mice{
+  right: 15px;
+}
+.prompt, .brandVoice, .Mice{
+  margin: 0 0.3em;
+  padding: 0.5em !important;
+  border-radius: 50%;
+}
+.prompt:hover, .brandVoice:hover, .Mice:hover{
+  background-color: #f3e2fd;
+}
+.msgInput .mobileTog{
+  display: none;
+  position: absolute;
+  top: 1em;
+  left: 10px;
+}
+.chatNav{
+  padding-left: 0;
+  width: 100%;
+  list-style-type: none;
+}
+.chatNav .navItem .navLink{
+  color: black;
+  text-decoration: none;
+}
+.chatNav .navItem{
+  display: block;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.486);
+  
+}
+.navItem.active{
+  border-left: 3px solid #4b49ac;
+}
+.DelOrView button{
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2em 0.5em;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.DelOrView{
+  display: none;
+  position: absolute;
+  top: 30%;
+  right: 3%;
+}
+.chatNav .navItem:hover .DelOrView{
+  display: flex;
+}
+.DelOrView button:hover{
+  transform: scale(1.1);
+}
+.DelOrView .viewBtn{
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.DelOrView .delBtn{
+  background-color: #dc2626;
+  color: white;
+}
+.AiWriterModels{
+  border-top: 1px solid #f5f5f6;
+  border-left: 1px solid #f5f5f6;
+}
+.AiWriterModels .col{
+  border-right: 1px solid #f5f5f6;
+  border-bottom: 1px solid #f5f5f6;
+}
+.AiWriterModels .col a{
+  text-decoration: none;
+  color: black;
+}
+.mtCard{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.cardIcon{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: black;
+  border-radius: 9999px;
+  transition: transform 0.3s ease
+}
+ .activeDot{
+  position: absolute;
+  background-color: green;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  bottom: 1%;
+  right: 0%;
+}
+.cardIcon .size{
+  display: flex;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.cardHeader{
+  position: relative;
+}
+.Fav{
+  position: absolute;
+  top: 0;
+  right: -5%;
+}
+.Fav button{
+  border-radius: 50%;
+}
+.Fav button:hover{
+  background-color: #320580;
+  color: white;
+}
+.cardBody h4{
+  font-weight: bolder;
+  font-size: 1.225rem;
+  padding-top: 5px;
+}
+.cardBody .mdi{
+  display: none;
+}
+.cardBody .discrp{
+  width: 80%;
+  opacity: 0.8;
+}
+.AiWriterModels .col:hover .cardBody .mdi {
+  display: flex;
+ }
+ .AiWriterModels .col:hover .cardIcon {
+  transform: scale(1.1);
+}
+.filterWriterModel{
+  list-style-type: none;
+  padding: 1.3em 0 0 0;
+}
+.filterWriterModel li{
+  border-radius: 10px;
+  padding: 0.1em 0.5em;
+  margin-right: 2.5em;
+  cursor: pointer;
+}
+
+.filterWriterModel li:hover, .filterWriterModel li.active{
+  background-color: #f5f5f6;
+}
+
+
+
+/* Container for the slim toggle button */
+.toggle-btn {
+  position: relative;
+  width: 50px; /* Slim width */
+  height: 24px; /* Slim height */
+}
+
+/* Hide the checkbox */
+.toggle-input {
+  display: none;
+}
+
+/* Style the label as the toggle switch */
+.toggle-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: white; /* White background initially */
+  border: 2px solid #ccc; /* Gray border initially */
+  border-radius: 50px; /* Rounded */
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* The circular button inside the switch */
+.toggle-button {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #ccc; /* Gray button initially */
+  border-radius: 50%;
+  transform: translateY(-50%); /* Vertically center the button */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Light shadow on button */
+}
+
+/* When checked, change the background color and border to your primary color */
+.toggle-input:checked + .toggle-label {
+  background: #4B49AC; /* Primary color when clicked */
+  border-color: #4B49AC; /* Border changes to primary color */
+  box-shadow: 0 4px 10px rgba(75, 73, 172, 0.4); /* Subtle shadow when active */
+}
+
+.toggle-input:checked + .toggle-label .toggle-button {
+  transform: translate(26px, -50%); /* Move button to the right, vertically centered */
+  background-color: white; /* Button turns white on active */
+}
+
+/* Hover effect for a clean glow */
+.toggle-label:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Gentle glow on hover */
+}
+
+/* Ripple-like effect on click */
+.toggle-label:active .toggle-button {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Ripple effect on button press */
+}
+
+.iyb_togler, .gbp_togler{
+  display: none;
+}
+.HeadLeft{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 0.8em;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ececec;
+}
+.HeadLeft button:hover{
+  background-color: #f5f5f6;
+}
+.HeadLeft .save{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.HeadLeft .save:hover{
+  background-color: #320580;
+  color: white;
+}
+#psTogle{
+  display: none;
+}
+.attachmentBtn{
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  background-color: #f6e8fe;
+}
+.AiChatModels .cardIcon{
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+ 
+}
+.AiChatModels .col:hover .cardIcon{
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.AiChatModels .Fav{
+  position: absolute;
+  top: -20%;
+  left: 0;
+}
+.searchAichat{
+  position: relative;
+}
+.searchAichat input{
+  height: 2.5em;
+  border: none;
+  background-color: #f1f1f3;
+  border-radius: 20px;
+  padding-left: 2.8em;
+}
+.searchAichat i{
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: 24px;
+}
+
+        
+        @media (max-width: 991px) {
+          .attachmentBtn{
+            position: relative;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            
+          }
+          .First-tab .tabs2 li {
+            padding: 0.3em 1em;
+            font-size: 13px;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .stableDiffusionTabs .tabs1 li {
+          font-size: 13px;
+          padding: 0.5em 1.5em;
+          /* border-radius: 20px; */
+          white-space: nowrap;
+      }
+        }
+/* Styles for mobile devices */
+@media (max-width: 991px) {
+  .chatSideBar {
+    display: none;
+      position: absolute;
+      width: 100%; /* Full width when dropdown */
+      top: 80px;
+      transform: translateY(-100%); /* Hide it initially */
+      z-index: 1000; /* Ensure it appears above other elements */
+      background-color: #f0f0f0; /* Match background color */
+  }
+
+  .chatBox {
+      width: 100%; /* Full width when sidebar is hidden */
+  }
+
+  .chatSideBar.active {
+    display: block;
+    transform: translateY(0); /* Show dropdown when active */
+  }
+
+  #toggleSidebar {
+      display: block; /* Show the dropdown toggle button */
+  }
+  .chatContainer{
+    height: 100vh;
+  }
+  .msgSendBox textarea{
+    padding-right: 30px;
+    padding-left: 35px;
+  }
+  .msgSendBox .Mice{
+    right: 5px;
+  }
+  .msgSendBox .Mice .size-6{
+    width: 1.2rem;
+  }
+  .msgSendBox .promptContainer{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    padding: 0.5em;
+    flex-direction: column;
+    top: -150%;
+    left: 0;
+  }
+  .msgInput .mobileTog{
+    display: flex;
+  }
+  .chatBoxHeader{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .DelOrView{
+    display: flex;
+  }
+  .msgSendBox .forChatAiModelpromptContainer{
+    top: -290%;
+  }
+}
+
+/* Ensure toggle button is styled */
+.dropdown-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
