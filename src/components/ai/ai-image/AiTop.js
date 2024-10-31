@@ -97,7 +97,16 @@ const AiTop = () => {
         localStorage.setItem('generatedImages', JSON.stringify(generatedImages));
     }, [generatedImages]);
 
-   
+    // Update localStorage whenever generatedImages changes
+    // const handleEyeButtonClick = (image) => {
+    //     setSelectedImage(image);
+    //     setShowModal(true);
+    // };
+
+    // const closeModal = () => {
+    //     setShowModal(false);
+    //     setSelectedImage(null);
+    // };
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 // Function to handle eye button click
