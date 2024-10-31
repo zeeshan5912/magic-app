@@ -149,20 +149,31 @@ const AiTop = () => {
         }
 
         // Toggle Button Logic
-        $(document).ready(function () {
+        $(function () {
             $('.settingTogleBtn button').on('click', function (event) {
                 event.preventDefault(); // Prevent default button behavior
-
-                var $span = $(this).find('span');
-                var $settingContainer = $(this).closest('.advanceSetting').find('.settingContainer');
-
-                // Toggle the settingContainer visibility
-                $settingContainer.slideToggle();
-
-                // Toggle the "+" and "-" text inside the span
-                $span.text($span.text() === '+' ? '-' : '+');
+        
+                var $button = $(this);
+                var $span = $button.find('span');
+                var $settingContainer = $button.closest('.advanceSetting').find('.settingContainer');
+        
+                // Toggle the visibility and icon only for the current button's container
+                if ($settingContainer.hasClass('open')) {
+                    $settingContainer.removeClass('open').slideUp();
+                    $span.text('+');
+                } else {
+                    // Close all other containers and reset their icons
+                    $('.settingContainer').removeClass('open').slideUp();
+                    $('.settingTogleBtn button span').text('+');
+        
+                    // Open the clicked container and set the toggle icon
+                    $settingContainer.addClass('open').slideDown();
+                    $span.text('-');
+                }
             });
         });
+        
+        
     //    Add more 
     $('#addMoreBtn').on('click', function (e) {
         e.preventDefault();
