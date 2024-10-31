@@ -24,6 +24,7 @@ import AiVoHeader from './components/ai/ai-vo/AiVoHeader';
 import AiSpeech from './components/ai/ai-speechtotext/AiSpeech';
 import Affliate from './components/Affliate';
 import PostTitle from './components/ai/ai-writer/PostTitle';
+import SummaryText from './components/ai/ai-writer/SummryText';
 import Dashboard from './components/Dashboard';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(checkAuth());
@@ -59,6 +60,7 @@ function App() {
           <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
           <Route path="/aiwriter" element={<ProtectedRoute element={<AiWriter />} />} />
           <Route path="/post_title_generator" element={<ProtectedRoute element={<PostTitle/>} />} />
+          <Route path="/summarize_text" element={<ProtectedRoute element={<SummaryText/>} />} />
           <Route path="/aiheadervideo" element={<ProtectedRoute element={<AiVideoHeader />} />} />
           <Route path="/aichat" element={<ProtectedRoute element={<AiChatHeader />} />} />
           <Route path="/aichatx" element={<ProtectedRoute element={<AiChatx/> } />} />
