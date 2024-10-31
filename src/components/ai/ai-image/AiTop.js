@@ -290,7 +290,7 @@ const closeModal = () => {
                             </div>
                             <div className="col-lg-2">
                                 <label className="form-label">Art Style</label>
-                                <select className="form-select" onChange={(e) => setArtStyle(e.target.value)}>
+                                 <select className="form-select" onChange={(e) => setArtStyle(e.target.value)}>
                                     <option value="Cartoon">Cartoon</option>
                                     <option value="Realistic">Realistic</option>
                                 </select>
