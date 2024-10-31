@@ -5,7 +5,8 @@ import './custom.css';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import ForgetPassword from './components/ForgetPassword'; // Import ForgetPassword component
-import AiWriter from './components/ai/ai-article/AiWriter';
+import AiWriter from './components/ai/ai-writer/AiWriter';
+
 import AiHeader from './components/ai/ai-image/AiHeader';
 import AiVideoHeader from './components/ai/ai-video/AiVideoHeader';
 import AiChatHeader from './components/ai/ai-chat/AiChatHeader';
@@ -22,7 +23,7 @@ import AiRssHeader from './components/ai/ai-rss/AiRssHeader';
 import AiVoHeader from './components/ai/ai-vo/AiVoHeader';
 import AiSpeech from './components/ai/ai-speechtotext/AiSpeech';
 import Affliate from './components/Affliate';
-
+import PostTitle from './components/ai/ai-writer/PostTitle';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(checkAuth());
 
@@ -54,7 +55,8 @@ function App() {
           {/* <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/signup" element={isAuthenticated ? <Navigate to="/dashboard" /> : <SignUp />} />
           <Route path="/forget-password" element={<ForgetPassword />} /> {/* New route for Forget Password */}
-          <Route path="/aiheader" element={<ProtectedRoute element={< AiWriter/>} />} />
+          <Route path="/aiwriter" element={<ProtectedRoute element={<AiWriter />} />} />
+          <Route path="/post_title_generator" element={<ProtectedRoute element={<PostTitle/>} />} />
           <Route path="/aiheadervideo" element={<ProtectedRoute element={<AiVideoHeader />} />} />
           <Route path="/aichat" element={<ProtectedRoute element={<AiChatHeader />} />} />
           <Route path="/aichatx" element={<ProtectedRoute element={<AiChatx/> } />} />
