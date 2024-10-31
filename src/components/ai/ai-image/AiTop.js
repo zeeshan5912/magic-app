@@ -875,7 +875,7 @@ const AiTop = () => {
                 </div>
             </div>
             {/* Results Section */}
- {generatedImages.length > 0 && (
+            {generatedImages.length > 0 && (
                 <div className="results mt-5">
                     <h3 style={{ fontWeight: 900 }}>Results</h3>
                     <div className="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 mt-4">
