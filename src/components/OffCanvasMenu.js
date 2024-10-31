@@ -149,14 +149,14 @@ const OffCanvasMenu = () => {
             {/* Offcanvas Items */}
             {[
               { icon: 'mdi-folder-account', color: 'rgb(255, 153, 0)', label: 'Documents' },
-              { icon: 'mdi-clipboard-text', color: 'blue', label: 'Ai Writer', path: '/ai-writer' },
+              { icon: 'mdi-clipboard-text', color: 'blue', label: 'Ai Writer', path: '/aiwriter' },
               { icon: 'mdi-table-edit', color: 'brown', label: 'Ai Editor', path: '/ai-editor' },
               { icon: 'mdi-folder-multiple-image', color: 'green', label: 'Ai Avatar', path: '/ai-avatar' },
               { icon: 'mdi-checkbox-multiple-marked-circle-outline', color: 'blueviolet', label: 'Ai Plagiarism', path: '/ai-plagiarism' },
               { icon: 'mdi-credit-card-scan', color: 'rgb(228, 13, 78)', label: 'Ai Detector', path: '/ai-detector' },
               { icon: 'mdi-share-variant', color: 'rgb(15, 69, 170)', label: 'Ai Social Media', path: '/ai-social-media' },
               { icon: 'mdi-calendar-clock', color: 'rgb(0, 128, 117)', label: 'Scheduled Posts', path: '/scheduled-posts' },
-              { icon: 'mdi-file-image', color: 'rgb(52, 226, 110)', label: 'Ai Image', path: '/aiwriter' }, // Add path for Ai Image
+              { icon: 'mdi-file-image', color: 'rgb(52, 226, 110)', label: 'Ai Image', path: '/aiimage' }, // Add path for Ai Image
               { icon: 'mdi-book-open', color: 'rgb(85, 27, 20)', label: 'Ai Article Wizard', path: '/ai-article-wizard' },
             ].map((item, index) => (
               <div className="col px-0" key={index}>

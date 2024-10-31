@@ -24,6 +24,7 @@ import AiVoHeader from './components/ai/ai-vo/AiVoHeader';
 import AiSpeech from './components/ai/ai-speechtotext/AiSpeech';
 import Affliate from './components/Affliate';
 import PostTitle from './components/ai/ai-writer/PostTitle';
+import Dashboard from './components/Dashboard';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(checkAuth());
 
@@ -55,6 +56,7 @@ function App() {
           {/* <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/signup" element={isAuthenticated ? <Navigate to="/dashboard" /> : <SignUp />} />
           <Route path="/forget-password" element={<ForgetPassword />} /> {/* New route for Forget Password */}
+          <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
           <Route path="/aiwriter" element={<ProtectedRoute element={<AiWriter />} />} />
           <Route path="/post_title_generator" element={<ProtectedRoute element={<PostTitle/>} />} />
           <Route path="/aiheadervideo" element={<ProtectedRoute element={<AiVideoHeader />} />} />
@@ -73,7 +75,7 @@ function App() {
           <Route path="/aispeech" element={<ProtectedRoute element={<AiSpeech/>} />} />
           <Route path="/affliate" element={<ProtectedRoute element={<Affliate/>} />} />
 
-          <Route path="/dashboard" element={<ProtectedRoute element={<AiHeader  />} />} />
+          <Route path="/aiimage" element={<ProtectedRoute element={<AiHeader  />} />} />
           <Route path="/" element={<Navigate to="/login" />} />
         </Routes>
       </div>

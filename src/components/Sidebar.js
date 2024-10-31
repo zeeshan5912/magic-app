@@ -100,12 +100,12 @@ const Sidebar = () => {
     </Link>
   </li>
 
-  <li className="nav-item">
+  {/* <li className="nav-item">
     <Link className="nav-link" to="/aiwriter">
       <FiFileText size={21} className="menu-icon" />
       {!isMinimized && <span className="menu-title">Ai Writer</span>}
     </Link>
-  </li>
+  </li> */}
 
   <li className="nav-item">
     <Link className="nav-link" to="/aiheadervideo">
