@@ -26,6 +26,7 @@ import Affliate from './components/Affliate';
 import PostTitle from './components/ai/ai-writer/PostTitle';
 import SummaryText from './components/ai/ai-writer/SummryText';
 import Dashboard from './components/Dashboard';
+import Document from './components/ai/docs/Document';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(checkAuth());
 
@@ -59,6 +60,7 @@ function App() {
           <Route path="/forget-password" element={<ForgetPassword />} /> {/* New route for Forget Password */}
           <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
           <Route path="/aiwriter" element={<ProtectedRoute element={<AiWriter />} />} />
+          <Route path="/document" element={<ProtectedRoute element={<Document/>} />} />
           <Route path="/post_title_generator" element={<ProtectedRoute element={<PostTitle/>} />} />
           <Route path="/summarize_text" element={<ProtectedRoute element={<SummaryText/>} />} />
           <Route path="/aiheadervideo" element={<ProtectedRoute element={<AiVideoHeader />} />} />

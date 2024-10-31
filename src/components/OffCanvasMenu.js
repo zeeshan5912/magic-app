@@ -37,7 +37,7 @@ const OffCanvasMenu = () => {
           <div className="row row-cols-3 px-4 py-1 pb-3">
             {/* Offcanvas Items */}
             {[
-              { icon: 'mdi-folder-account', color: 'rgb(255, 153, 0)', label: 'Documents' },
+              { icon: 'mdi-folder-account', color: 'rgb(255, 153, 0)', label: 'Documents', path: '/document' },
               { icon: 'mdi-clipboard-text', color: 'blue', label: 'Ai Writer', path: '/aiwriter' },
               { icon: 'mdi-table-edit', color: 'brown', label: 'Ai Editor', path: '/ai-editor' },
               { icon: 'mdi-folder-multiple-image', color: 'green', label: 'Ai Avatar', path: '/ai-avatar' },
