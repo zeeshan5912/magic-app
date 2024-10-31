@@ -108,7 +108,7 @@ const AiWriter = () => {
                                 </Link>
                             </div>
                             <div className="col Voiceover">
-                                <Link to="/post_title_generator">
+                                <Link to="/summarize_text">
                                     <div className="d-flex flex-column px-4 mtCard">
                                         <div className="d-flex justify-content-between cardHeader">
                                             <div className="cardIcon" style={{ backgroundColor: '#ccd9b8' }}>
