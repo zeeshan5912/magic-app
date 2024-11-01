@@ -40,18 +40,18 @@ const AiWriter = () => {
                     <Sidebar style={{ flex: '0 0 200px' }} />
                     <div className="content-wrapper" style={{ backgroundColor: 'white' }}>
                         <div className="row">
-                            <div className="col-12 mb-4">
+                            {/* <div className="col-12 mb-4">
                                 <a href="/" className="btn p-0"><span className="d-flex align-items-center"><i
                                     className="mdi mdi-chevron-left fs-5"></i> Back to dashboard</span></a>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="row pb-4">
                             <div className="col-lg-6">
-                                <h3 className="fw-bolder">Ai Writer</h3>
+                                <h3 className="fw-bolder mt-5">Ai Writer</h3>
                                 <p>Seamlessly upload any image you want to explore and get insightful conversations.</p>
                             </div>
                             <div className="col-lg-6 aimg">
-                                <div className="d-flex justify-content-center justify-content-lg-end">
+                                <div className="d-flex justify-content-center justify-content-lg-end mt-5">
                                     <a href="/" className="btn bg-white mx-2"
                                         style={{ borderBottom: '1px solid rgb(207, 206, 206)' }}>My Documents</a>
                                     <a href="/" className="btn btn-primary"><span className="d-flex align-items-center"><i

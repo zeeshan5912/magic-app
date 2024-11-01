@@ -56,7 +56,7 @@ import GramCorr from './components/ai/ai-writer/GrammerCorr';
 import TlDr from './components/ai/ai-writer/TLDRSum';
 import CustGene from './components/ai/ai-writer/CustomGen';
 import Dashboard from './components/Dashboard';
-import Document from './components/ai/docs/Document';
+import AiDocuments from './components/ai/ai-documents/AiDocuments';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(checkAuth());
 
@@ -90,7 +90,7 @@ function App() {
           <Route path="/forget-password" element={<ForgetPassword />} /> {/* New route for Forget Password */}
           <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
           <Route path="/aiwriter" element={<ProtectedRoute element={<AiWriter />} />} />
-          <Route path="/document" element={<ProtectedRoute element={<Document/>} />} />
+          <Route path="/document" element={<ProtectedRoute element={<AiDocuments/>} />} />
           <Route path="/post_title_generator" element={<ProtectedRoute element={<PostTitle/>} />} />
           <Route path="/summarize_text" element={<ProtectedRoute element={<SummaryText/>} />} />
           <Route path="/product_desc" element={<ProtectedRoute element={<ProdDesc/>} />} />

@@ -8,7 +8,7 @@ import Pagination from './Pagination'
 import DocumentCard from './DocumentCard'
 import DocumentList from './DocumentList'
 import FilterSort from './FilterSort'
-
+import './docs.css';
 export default function AiDocuments() {
     const [documents, setDocuments] = useState([]);
     const [isLoading, setIsLoading]=useState(true);
@@ -100,22 +100,22 @@ export default function AiDocuments() {
             <Sidebar />
             <div className="content-wrapper">
                 <div className="row">
-                    <div className="col-12 mb-4">
+                    {/* <div className="col-12 mb-4">
                         <Link to="/dashboard" className="btn p-0">
                         <span className="d-flex align-items-center">
                             <i className="mdi mdi-chevron-left fs-5"></i> Back to dashboard
                         </span>
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="row pb-2 mb-3">
                     <div className="col-6">
-                        <h3 style={{ fontWeight: 900 }}>My Documents</h3>
+                        <h3 style={{ fontWeight: 900 }} className='mt-5'>My Documents</h3>
                     </div>
 
                     <div className="col-6 aimg">
-                        <div className="d-flex justify-content-end">
+                        <div className="d-flex justify-content-end mt-5">
                             <Link to="/#" className="btn bg-white mx-2" style={{ borderBottom: '1px solid rgb(207, 206, 206)' }}>
                             <span className="d-flex align-items-center">
                             <i className="mdi mdi-plus me-1"></i> New Folder
