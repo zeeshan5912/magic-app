@@ -109,7 +109,8 @@ const Document = () => {
                                                 </button>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr>    
+                                    
                                     <tr>
                                         <td>
                                             <div class="d-flex name">
