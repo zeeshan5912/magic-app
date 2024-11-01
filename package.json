@@ -30,6 +30,7 @@
     "react-quill": "^2.0.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.7.4",
     "summernote": "^0.9.1",
     "web-vitals": "^2.1.4"
   },

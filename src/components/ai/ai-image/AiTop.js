@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from 'react';
 import $ from 'jquery'; // Make sure you have jQuery imported
 import axios from 'axios';
-// import './AiTop.css';jdj
+// import './AiTop.css';
 import ImgUpload from './ImgUpload'
 const AiTop = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +17,7 @@ const AiTop = () => {
     const [numberOfImages, setNumberOfImages] = useState(1);
     const [imageQuality, setImageQuality] = useState('hd');
     const [showModal, setShowModal] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
+    // const [selectedImage, setSelectedImage] = useState(null);
     const generateImage = async (e) => {
         e.preventDefault();
         const token = localStorage.getItem('token');
@@ -97,18 +97,38 @@ const AiTop = () => {
         localStorage.setItem('generatedImages', JSON.stringify(generatedImages));
     }, [generatedImages]);
 
-
     // Update localStorage whenever generatedImages changes
-    const handleEyeButtonClick = (image) => {
-        setSelectedImage(image);
-        setShowModal(true);
-    };
+    // const handleEyeButtonClick = (image) => {
+    //     setSelectedImage(image);
+    //     setShowModal(true);
+    // };
 
-    const closeModal = () => {
-        setShowModal(false);
-        setSelectedImage(null);
-    };
-    
+    // const closeModal = () => {
+    //     setShowModal(false);
+    //     setSelectedImage(null);
+    // };
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+// Function to handle eye button click
+const handleEyeButtonClick = (index) => {
+    setCurrentImageIndex(index);
+    setShowModal(true);
+};
+
+// Function to go to the previous image
+const handlePreviousImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : generatedImages.length - 1));
+};
+
+// Function to go to the next image
+const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex < generatedImages.length - 1 ? prevIndex + 1 : 0));
+};
+
+// Close modal function
+const closeModal = () => {
+    setShowModal(false);
+};
     useEffect(() => {
         // DALL-E Tabs Logic
         if ($(".First-tab").length) {
@@ -270,7 +290,7 @@ const AiTop = () => {
                             </div>
                             <div className="col-lg-2">
                                 <label className="form-label">Art Style</label>
-                                <select className="form-select" onChange={(e) => setArtStyle(e.target.value)}>
+                                 <select className="form-select" onChange={(e) => setArtStyle(e.target.value)}>
                                     <option value="Cartoon">Cartoon</option>
                                     <option value="Realistic">Realistic</option>
                                 </select>
@@ -876,52 +896,61 @@ const AiTop = () => {
             </div>
             {/* Results Section */}
             {generatedImages.length > 0 && (
-                <div className="results mt-5">
-                    <h3 style={{ fontWeight: 900 }}>Results</h3>
-                    <div className="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 mt-4">
-                        {generatedImages.map((image, index) => (
-                            <div className="col" key={image.id || index}>
-                                <div className="card mb-3">
-                                    <div className="imgContainer w-100 overflow-hidden">
-                                        <img src={image.output} className="img-fluid" alt={image.title || "Generated Image"} />
-                                        <div className="imgButton">
-                                            <button className="imgbtn imgClose bg-white mb-2">
-                                                <i className="mdi mdi-close"></i>
-                                            </button>
-                                            <button className="imgbtn bg-white mb-2" onClick={() => handleEyeButtonClick(image)}>
-                                                <i className="mdi mdi-eye"></i>
-                                            </button>
-                                            <button className="imgbtn bg-white mb-2">
-                                                <i className="mdi mdi-download"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="card-body px-1 py-3">
-                                        <h6 className="card-title fs-6 mb-0">{image.title || "Generated Image"}</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
-                {showModal && (
-                <div className="modal" style={{ display: 'block' }}>
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title">Image Preview</h5>
-                                <button type="button" className="close" onClick={closeModal}>
-                                    <span>&times;</span>
+    <div className="results mt-5">
+        <h3 style={{ fontWeight: 900 }}>Results</h3>
+        <div className="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 mt-4">
+            {generatedImages.map((image, index) => (
+                <div className="col" key={image.id || index}>
+                    <div className="card mb-3">
+                        <div className="imgContainer w-100 overflow-hidden">
+                            <img src={image.output} className="img-fluid" alt={image.title || "Generated Image"} />
+                            <div className="imgButton">
+                                <button className="imgbtn imgClose bg-white mb-2">
+                                    <i className="mdi mdi-close"></i>
+                                </button>
+                                <button className="imgbtn bg-white mb-2" onClick={() => handleEyeButtonClick(index)}>
+                                    <i className="mdi mdi-eye"></i>
+                                </button>
+                                <button className="imgbtn bg-white mb-2">
+                                    <i className="mdi mdi-download"></i>
                                 </button>
                             </div>
-                            <div className="modal-body">
-                                <img src={selectedImage.output} className="img-fluid" alt="Preview" />
-                            </div>
+                        </div>
+                        <div className="card-body px-1 py-3">
+                            <h6 className="card-title fs-6 mb-0">{image.title || "Generated Image"}</h6>
                         </div>
                     </div>
                 </div>
-            )}
+            ))}
+        </div>
+    </div>
+)}
+
+{showModal && (
+    <div className="modal" style={{ display: 'block' }}>
+        <div className="modal-dialog">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title">Image Preview</h5>
+                    <button type="button" className="close" onClick={closeModal}>
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div className="modal-body text-center">
+                    <img src={generatedImages[currentImageIndex].output} className="img-fluid" alt="Preview" />
+                </div>
+                <div className="modal-footer">
+                    <button className="btn btn-primary" onClick={handlePreviousImage}>
+                        <i className="mdi mdi-arrow-left"></i> 
+                    </button>
+                    <button className="btn btn-primary" onClick={handleNextImage}>
+                         <i className="mdi mdi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+)}
         </>
     )
 }

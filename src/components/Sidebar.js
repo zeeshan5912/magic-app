@@ -99,6 +99,12 @@ const Sidebar = () => {
       {!isMinimized && <span className="menu-title">Dashboard</span>}
     </Link>
   </li>
+  <li className="nav-item">
+    <Link className="nav-link" to="/document">
+      <FiHome size={21} className="menu-icon" />
+      {!isMinimized && <span className="menu-title">Documents</span>}
+    </Link>
+  </li>
 
   {/* <li className="nav-item">
     <Link className="nav-link" to="/aiwriter">
