@@ -6,7 +6,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import axios from 'axios';
 
-const PostTitle = () => {
+const ArticleGen = () => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [userDescription, setUserDescription] = useState('');
@@ -27,7 +27,7 @@ const PostTitle = () => {
 
             try {
                 const response = await axios.get(
-                    'https://magicai.keydevsdemo.com/api/aiwriter/generator/post_title_generator/workbook',
+                    'https://magicai.keydevsdemo.com/api/aiwriter/generator/article_generator/workbook',
                     {
                         headers: {
                             'Authorization': `Bearer ${token}`,
@@ -50,7 +50,7 @@ const PostTitle = () => {
 
     const handleGeneratePrompt = async (event) => {
         event.preventDefault();
-        setLoading(true);
+
         const token = localStorage.getItem('token');
         const promptData = {
             post_type: slug, // Use dynamic slug instead of post_type
@@ -109,7 +109,8 @@ const PostTitle = () => {
         } catch (error) {
             console.error('Error fetching full output:', error);
         }
-        finally {
+        finally
+        {
             setLoading(false);
         }
     };
@@ -139,7 +140,7 @@ const PostTitle = () => {
                         <div className="topic">
                             <div className="row pt-5">
                                 <div className="col-lg-4">
-                                    <div class="col-12 form-control h-auto mb-3">
+                                <div class="col-12 form-control h-auto mb-3">
                                         <label class="fw-bolder" for="">Remaining Credits</label>
 
                                         <div class="progress" style={{ backgrounColor: 'rgba(75, 73, 172, 0.2)' }}>
@@ -161,9 +162,8 @@ const PostTitle = () => {
                                         </div>
 
                                     </div>
-
                                     <form onSubmit={handleGeneratePrompt} className="row">
-                                        <div class="col-12 d-flex flex-column ">
+                                    <div class="col-12 d-flex flex-column ">
                                             <div class="d-flex">
                                                 <div class="toggle-btn">
                                                     <input type="checkbox" id="toggle" class="toggle-input" />
@@ -230,17 +230,17 @@ const PostTitle = () => {
                                         </div>
 
 
-                                        <div className="col-12 mb-3">
+                                        {/* <div className="col-12 mb-3">
                                             <label htmlFor="" className="form-label">Your Description</label>
-                                            <textarea
-                                                className="form-control"
-                                                rows="4"
+                                            <textarea 
+                                                className="form-control" 
+                                                rows="4" 
                                                 placeholder="Enter your description here"
                                                 value={userDescription}
                                                 onChange={(e) => setUserDescription(e.target.value)}
                                             />
-                                        </div>
-                                        {/* <div className="col-12 mb-3">
+                                        </div> */}
+                                        <div className="col-12 mb-3">
                                             <label htmlFor="" className="form-label">Article Title</label>
                                             <input 
                                                 type="text" 
@@ -257,7 +257,7 @@ const PostTitle = () => {
                                                 value={focusKeywords}
                                                 onChange={(e) => setFocusKeywords(e.target.value)}
                                             />
-                                        </div> */}
+                                        </div>
                                         <div className="col-12 mb-3">
                                             <div className="row mb-3">
                                                 <div className="col-lg-6">
@@ -270,9 +270,9 @@ const PostTitle = () => {
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <label htmlFor="" className="form-label">Maximum Length</label>
-                                                    <input
-                                                        type="number"
-                                                        className="form-control form-control-sm"
+                                                    <input 
+                                                        type="number" 
+                                                        className="form-control form-control-sm" 
                                                         value={maxLength}
                                                         onChange={(e) => setMaxLength(Number(e.target.value))}
                                                     />
@@ -298,14 +298,7 @@ const PostTitle = () => {
                                             </div>
                                         </div>
                                         <div className="col-12 mb-3">
-                                            <button type="submit" className="btn btn-primary w-100 text-center mt-3" disabled = {loading}>
-                                                {loading ? (
-                                                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                                ) : (
-                                                    'Generate'
-                                                )
-                                            }
-                                            </button>
+                                            <button type="submit" className="btn btn-primary w-100 text-center mt-3">Generate Article</button>
                                         </div>
                                     </form>
                                 </div>
@@ -357,7 +350,7 @@ const PostTitle = () => {
     );
 };
 
-export default PostTitle;
+export default ArticleGen;
 // import React, { useState } from 'react';
 
 // import Navbar from '../../Navbar';

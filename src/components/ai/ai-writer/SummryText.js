@@ -14,10 +14,13 @@ const SummaryText = () => {
     const [messageId, setMessageId] = useState(null);
     const [articleTitle, setArticleTitle] = useState('How AI is transforming industries');
     const [focusKeywords, setFocusKeywords] = useState('AI, technology, innovation');
-    const [creativity, setCreativity] = useState(0.7); // Default creativity as a number
-    const [language, setLanguage] = useState('en-US'); // Default language
-    const [maxLength, setMaxLength] = useState(500); // Default maximum length
-    const [toneOfVoice, setToneOfVoice] = useState('Professional'); // Default tone of voice
+    const [creativity, setCreativity] = useState(0.7);
+    const [language, setLanguage] = useState('en-US');
+    const [maxLength, setMaxLength] = useState(200);
+    const [loading, setLoading] = useState(false);
+    const [toneOfVoice, setToneOfVoice] = useState('Professional');
+    const [inputPrompts, setInputPrompt] = useState('');
+    const [slug, setSlug] = useState(''); // State for dynamic slug
 
     useEffect(() => {
         const fetchData = async () => {
@@ -37,6 +40,7 @@ const SummaryText = () => {
                 setTitle(data.title);
                 setDescription(data.description);
                 setRewrittenText(data.title);
+                setSlug(data.slug); // Set slug dynamically from the API response
             } catch (error) {
                 console.error('There was a problem with the request:', error);
             }
@@ -47,19 +51,20 @@ const SummaryText = () => {
 
     const handleGeneratePrompt = async (event) => {
         event.preventDefault();
-
+        setLoading(true);
         const token = localStorage.getItem('token');
         const promptData = {
-            post_type: "article_generator",
+            post_type: slug, // Use dynamic slug instead of post_type
             image_generator: false,
-            number_of_results: 3,
+            number_of_results: 1,
             maximum_length: maxLength,
-            creativity: creativity, // Use numeric value for creativity
+            creativity: creativity,
             language: language,
             negative_prompt: "none",
             tone_of_voice: toneOfVoice,
             article_title: articleTitle,
             focus_keywords: focusKeywords,
+            inputPrompt: inputPrompts,
         };
 
         try {
@@ -91,9 +96,9 @@ const SummaryText = () => {
                 'https://magicai.keydevsdemo.com/api/aiwriter/generate-full-output',
                 {
                     message_id: messageId,
-                    creativity: creativity, // Pass creativity as a numeric value
-                    maximum_length: maxLength, // Pass maximum length
-                    number_of_results: 1 // Set to 1 for the full output request
+                    creativity: creativity,
+                    maximum_length: maxLength,
+                    number_of_results: 1
                 },
                 {
                     headers: {
@@ -105,6 +110,9 @@ const SummaryText = () => {
             setRewrittenText(response.data.output);
         } catch (error) {
             console.error('Error fetching full output:', error);
+        }
+        finally {
+            setLoading(false);
         }
     };
 
@@ -133,6 +141,29 @@ const SummaryText = () => {
                         <div className="topic">
                             <div className="row pt-5">
                                 <div className="col-lg-4">
+                                <div class="col-12 form-control h-auto mb-3">
+                                        <label class="fw-bolder" for="">Remaining Credits</label>
+
+                                        <div class="progress" style={{ backgrounColor: 'rgba(75, 73, 172, 0.2)' }}>
+                                            <div class="progress-bar bg-primary" role="progressbar"
+                                                style={{ width: '50%' }} aria-valuenow="50" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3">
+                                            <div class="d-flex align-items-center fw-bolder">
+                                                <i class="mdi mdi-checkbox-blank-circle text-primary"
+                                                    style={{ fontSize: '12px', marginBottom: '2px' }}></i>
+                                                <div class="mx-2">Words</div> <span>2,998,016</span>
+                                            </div>
+                                            <div class="d-flex align-items-center fw-bolder">
+                                                <i class="mdi mdi-checkbox-blank-circle"
+                                                    style={{ fontSize: '12px', marginBottom: '2px', color: 'rgba(75, 73, 172, 0.2)' }}></i>
+                                                <div class="mx-2">Images</div> <span>2,998,016</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
                                     <form onSubmit={handleGeneratePrompt} className="row">
                                     <div class="col-12 d-flex flex-column ">
                                             <div class="d-flex">
@@ -269,13 +300,43 @@ const SummaryText = () => {
                                             </div>
                                         </div>
                                         <div className="col-12 mb-3">
-                                            <button type="submit" className="btn btn-primary w-100 text-center mt-3">Generate</button>
+                                            <button type="submit" className="btn btn-primary w-100 text-center mt-3" disabled = {loading}>
+                                                {loading ? (
+                                                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                ) : (
+                                                    'Generate'
+                                                )
+                                            }
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
 
                                 <div className="col-lg-8 px-1 px-lg-5">
                                     <form>
+                                    <div class="HeadLeft">
+                                            <div>
+                                                <button class="btn p-1 mx-1">
+                                                    <i class="mdi mdi-undo-variant"></i>
+                                                </button>
+                                                <button class="btn p-1 mx-1">
+                                                    <i class="mdi mdi-redo-variant"></i>
+                                                </button>
+                                                <button class="btn p-1 mx-1">
+                                                    <i class="mdi mdi-content-copy"></i>
+                                                </button>
+                                                <button class="btn p-1 mx-1">
+                                                    <i class="mdi mdi-download"></i>
+                                                </button>
+                                                <button class="btn p-1 mx-1">
+                                                    <i class="mdi mdi-minus-circle-outline text-danger"></i>
+                                                </button>
+                                                <button class="btn p-1 mx-1">
+                                                    <i class="mdi mdi mdi-repeat"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
                                         <div className="my-3 px-3">
                                             <input style={{ border: 'none', width: '100%' }} type="text" placeholder="Untitled Document..." />
                                         </div>

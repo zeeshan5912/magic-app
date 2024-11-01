@@ -25,6 +25,36 @@ import AiSpeech from './components/ai/ai-speechtotext/AiSpeech';
 import Affliate from './components/Affliate';
 import PostTitle from './components/ai/ai-writer/PostTitle';
 import SummaryText from './components/ai/ai-writer/SummryText';
+import ProdDesc from './components/ai/ai-writer/ProductDesc';
+import ArticleGenerator from './components/ai/ai-writer/ArticleGen';
+import ProductName from './components/ai/ai-writer/ProductNameGen';
+import TestimonalReview from './components/ai/ai-writer/TestimonalRev';
+import ProblemAgit from './components/ai/ai-writer/ProblemAgitate';
+import BlogSec from './components/ai/ai-writer/BlogSection';
+import BlogPost from './components/ai/ai-writer/BlogPostIdeas';
+import BlogIntro from './components/ai/ai-writer/BlogIntros';
+import BlogConc from './components/ai/ai-writer/BlogConclusion';
+import FacebookAd from './components/ai/ai-writer/FacebookAds';
+import YoutubeDesc from './components/ai/ai-writer/YoutubeVideoDesc';
+import YoutubeTitle from './components/ai/ai-writer/YoutubeVideoTitle';
+import YoutubeTag from './components/ai/ai-writer/YoutubeVideoTag';
+import InstaCap from './components/ai/ai-writer/InstaCaptions';
+import InstaHash from './components/ai/ai-writer/InstaHashtags';
+import SocialTweet from './components/ai/ai-writer/SocialMediaPostTweet';
+import SocialBusiness from './components/ai/ai-writer/SocialMediaPostBusiness';
+import FacebookHead from './components/ai/ai-writer/FacebookHeadlines';
+import GoogleHead from './components/ai/ai-writer/GoogleAdsHeadline';
+import GoogleDesc from './components/ai/ai-writer/GoogleAdsDesc';
+import ParaGen from './components/ai/ai-writer/ParagraphGenerator';
+import ProCon from './components/ai/ai-writer/ProsCons';
+import MetaDes from './components/ai/ai-writer/MetaDesc';
+import FaqGene from './components/ai/ai-writer/FaqGen';
+import EmailGene from './components/ai/ai-writer/EmailGen';
+import EmailAnsGene from './components/ai/ai-writer/EmailAnsGen';
+import NewsGene from './components/ai/ai-writer/NewsLetterGen';
+import GramCorr from './components/ai/ai-writer/GrammerCorr';
+import TlDr from './components/ai/ai-writer/TLDRSum';
+import CustGene from './components/ai/ai-writer/CustomGen';
 import Dashboard from './components/Dashboard';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(checkAuth());
@@ -61,6 +91,36 @@ function App() {
           <Route path="/aiwriter" element={<ProtectedRoute element={<AiWriter />} />} />
           <Route path="/post_title_generator" element={<ProtectedRoute element={<PostTitle/>} />} />
           <Route path="/summarize_text" element={<ProtectedRoute element={<SummaryText/>} />} />
+          <Route path="/product_desc" element={<ProtectedRoute element={<ProdDesc/>} />} />
+          <Route path="/article_gen" element={<ProtectedRoute element={<ArticleGenerator/>} />} />
+          <Route path="/prod_name" element={<ProtectedRoute element={<ProductName/>} />} />
+          <Route path="/test_review" element={<ProtectedRoute element={<TestimonalReview/>} />} />
+          <Route path="/prob_agit" element={<ProtectedRoute element={<ProblemAgit/>} />} />
+          <Route path="/blog_sec" element={<ProtectedRoute element={<BlogSec/>} />} />
+          <Route path="/blog_post" element={<ProtectedRoute element={<BlogPost/>} />} />
+          <Route path="/blog_intro" element={<ProtectedRoute element={<BlogIntro/>} />} />
+          <Route path="/blog_conc" element={<ProtectedRoute element={<BlogConc/>} />} />
+          <Route path="/facebook_ad" element={<ProtectedRoute element={<FacebookAd/>} />} />
+          <Route path="/youtube_desc" element={<ProtectedRoute element={<YoutubeDesc/>} />} />
+          <Route path="/youtube_title" element={<ProtectedRoute element={<YoutubeTitle/>} />} />
+          <Route path="/youtube_tag" element={<ProtectedRoute element={<YoutubeTag/>} />} />
+          <Route path="/insta_cap" element={<ProtectedRoute element={<InstaCap/>} />} />
+          <Route path="/insta_hash" element={<ProtectedRoute element={<InstaHash/>} />} />
+          <Route path="/social_tweet" element={<ProtectedRoute element={<SocialTweet/>} />} />
+          <Route path="/social_business" element={<ProtectedRoute element={<SocialBusiness/>} />} />
+          <Route path="/facebook_head" element={<ProtectedRoute element={<FacebookHead/>} />} />
+          <Route path="/google_head" element={<ProtectedRoute element={<GoogleHead/>} />} />
+          <Route path="/google_desc" element={<ProtectedRoute element={<GoogleDesc/>} />} />
+          <Route path="/para_gen" element={<ProtectedRoute element={<ParaGen/>} />} />
+          <Route path="/pro_con" element={<ProtectedRoute element={<ProCon/>} />} />
+          <Route path="/meta_desc" element={<ProtectedRoute element={<MetaDes/>} />} />
+          <Route path="/faq_gen" element={<ProtectedRoute element={<FaqGene/>} />} />
+          <Route path="/email_gen" element={<ProtectedRoute element={<EmailGene/>} />} />
+          <Route path="/email_ans_gen" element={<ProtectedRoute element={<EmailAnsGene/>} />} />
+          <Route path="/news_gen" element={<ProtectedRoute element={<NewsGene/>} />} />
+          <Route path="/gram_corr" element={<ProtectedRoute element={<GramCorr/>} />} />
+          <Route path="/tldr_sum" element={<ProtectedRoute element={<TlDr/>} />} />
+          <Route path="/custom_gen" element={<ProtectedRoute element={<CustGene/>} />} />
           <Route path="/aiheadervideo" element={<ProtectedRoute element={<AiVideoHeader />} />} />
           <Route path="/aichat" element={<ProtectedRoute element={<AiChatHeader />} />} />
           <Route path="/aichatx" element={<ProtectedRoute element={<AiChatx/> } />} />

@@ -13,6 +13,7 @@ const AiRewriter = () => {
     const [rewriteMode, setRewriteMode] = useState('Professional');
     const [language, setLanguage] = useState('en-US');
 
+
     useEffect(() => {
         const token = localStorage.getItem('token');
         axios.get('https://magicai.keydevsdemo.com/api/aiwriter/generator/ai_rewriter/workbook', {
