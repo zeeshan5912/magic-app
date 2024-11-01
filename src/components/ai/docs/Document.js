@@ -13,6 +13,7 @@ const Document = () => {
 
                         <div class="row pb-4">
                             <div class="col-lg-6">
+                                
                                 <h3 class="fw-bolder">My Documents</h3>
                                 <ul class="d-flex filterWriterModel">
                                     <li data-filter="*" class="active">All</li>
@@ -109,8 +110,7 @@ const Document = () => {
                                                 </button>
                                             </div>
                                         </td>
-                                    </tr>    
-                                    
+                                    </tr>
                                     <tr>
                                         <td>
                                             <div class="d-flex name">
