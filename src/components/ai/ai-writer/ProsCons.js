@@ -26,7 +26,7 @@ const ProsCons      = () => {
 
             try {
                 const response = await axios.get(
-                    'https://magicai.keydevsdemo.com/api/aiwriter/generator/paragraph_generator/workbook',
+                    'https://magicai.keydevsdemo.com/api/aiwriter/generator/pros_cons/workbook',
                     {
                         headers: {
                             'Authorization': `Bearer ${token}`,
