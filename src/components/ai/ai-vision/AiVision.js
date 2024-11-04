@@ -109,7 +109,7 @@ const AiVision = () => {
                                                         </li>
                                                     ))
                                                 ) : (
-                                                    <li className="navItem">No chats available</li>
+                                                    <li className="navItem pl-4">No chats available</li>
                                                 )}
                                             </ul>
                                         </div>
