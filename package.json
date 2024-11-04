@@ -19,6 +19,7 @@
     "isotope-layout": "^3.0.6",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.14.0",
+    "nprogress": "^0.2.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-code-blocks": "^0.1.6",
@@ -30,6 +31,7 @@
     "react-quill": "^2.0.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.14.1",
     "react-spring": "^9.7.4",
     "summernote": "^0.9.1",
     "web-vitals": "^2.1.4"

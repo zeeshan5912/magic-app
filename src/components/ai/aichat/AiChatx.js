@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from '../../Navbar';
 import Sidebar from '../../Sidebar';
 import Footer from '../../Footer';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 export const AiChatx = () => {
     const [chatList, setChatList] = useState([]);
@@ -69,12 +70,14 @@ export const AiChatx = () => {
                         </div>
 
                         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 AiWriterModels AiChatModels">
-                            {loading ? (
-                                <p>Loading...</p>
+                        {loading ? (
+                                <div className="d-flex justify-content-center w-100">
+                                    <ClipLoader color="#123abc" loading={loading} size={50} />
+                                </div>
                             ) : (
                                 chatList.map(chat => (
                                     <div className="col" key={chat.id}>
-                                        <a href="">
+                                        <a href=" ">
                                             <div className="d-flex flex-column mtCard">
                                                 <div className="d-flex justify-content-center cardHeader">
                                                     <div className="cardIcon" style={{ backgroundColor: '#a3d6c2' }}>
