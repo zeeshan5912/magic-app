@@ -15,7 +15,7 @@ export default function DocumentCard({filteredDocuments, toggleFavorite, handleD
     <ul className='grid-responsive-container d-flex flex-row flex-wrap align-items-center list-unstyled mt-4' >
         {filteredDocuments.map((document) => (
             <li className='d-flex justify-content-between align-items-center py-1 mt-1 mx-2' key={document.id}>
-                <div class="card">
+                <div className="card">
                     <div className='mt-3 mx-3 d-flex align-items-center justify-content-between'>
                         <span className="fw-bold px-1 generator-title"style={{ backgroundColor: document.ai_color, borderRadius: '5px', fontSize: '12px'}}>{document.generator.title}</span>
                         <button className='btn-favorite' style={{height: '30px', width: '30px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}} onClick={()=>toggleFavorite(document.id)}>

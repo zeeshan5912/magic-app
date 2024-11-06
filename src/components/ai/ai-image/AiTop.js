@@ -189,7 +189,7 @@ const closeModal = () => {
 
         // Create the new textarea element with a delete button
         const newTextarea = $(
-            '<div class="d-flex my-3"><textarea class="w-100 form-control" style="border-radius: 25px; height: 3.4em;" placeholder="Enter here..."></textarea><button class="btn btn-rounded btn-icon btn-danger delInput ms-3 my-auto"><i class="mdi mdi-delete"></i></button></div>'
+            '<div className="d-flex my-3"><textarea className="w-100 form-control" style="border-radius: 25px; height: 3.4em;" placeholder="Enter here..."></textarea><button className="btn btn-rounded btn-icon btn-danger delInput ms-3 my-auto"><i className="mdi mdi-delete"></i></button></div>'
         );
 
         // Insert the new textarea at the end of the form (just above the submit button)
